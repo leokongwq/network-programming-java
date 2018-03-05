@@ -8,12 +8,12 @@ import java.io.IOException;
  * Mail:leokongwq@gmail.com   
  * Description: desc
  */
-public class Bootstrap {
+public class ServerBootstrap {
 
     private static final int PORT = 8080;
 
     public static void main(String[] args) throws IOException {
         Reactor reactor = new Reactor(PORT);
-        reactor.run();
+        new Thread(reactor).start();
     }
 }
